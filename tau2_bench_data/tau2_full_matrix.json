@@ -1,0 +1,272 @@
+{
+  "benchmark": "tau2-bench telecom",
+  "citation": "Sierra Research, arxiv:2506.07982",
+  "panel": [
+    "llama3.1-8b",
+    "qwen2.5-7b",
+    "gemma3-12b",
+    "llama3.3-70b",
+    "gpt-oss-120b",
+    "deepseek-r1"
+  ],
+  "panel_pretty": [
+    "Llama-3.1-8B",
+    "Qwen2.5-7B",
+    "Gemma-3-12B",
+    "Llama-3.3-70B",
+    "gpt-oss-120B",
+    "DeepSeek-R1"
+  ],
+  "subset": "20 tasks from tau2-bench telecom_full (Sierra Research 2025)",
+  "n_dialogues": 720,
+  "n_tasks_per_cell": 20,
+  "n_trials": 1,
+  "max_steps": 80,
+  "schema": {
+    "success_matrix": "list of one entry per Agent. Each entry has 'Agent' (alias) and 'Simulated user' (mapping from simulator alias to percent success rate).",
+    "summary": "headline metrics on the 6x6 matrix",
+    "t1_variance": "K=10 trial replication on diagnostic cells; per_cell rows give per-cell Agent, Simulated user, n_trials, mean_pct, within_std_pp, cross_sim_std_pp, snr",
+    "bootstrap": "B=2000 task-resampling bootstrap; max_swing_ci90 and worst_tau_ci90 are 5th to 95th percentile"
+  },
+  "success_matrix": [
+    {
+      "Agent": "llama3.1-8b",
+      "Simulated user": {
+        "llama3.1-8b": 0.0,
+        "qwen2.5-7b": 0.0,
+        "gemma3-12b": 0.0,
+        "llama3.3-70b": 0.0,
+        "gpt-oss-120b": 5.0,
+        "deepseek-r1": 0.0
+      }
+    },
+    {
+      "Agent": "qwen2.5-7b",
+      "Simulated user": {
+        "llama3.1-8b": 0.0,
+        "qwen2.5-7b": 0.0,
+        "gemma3-12b": 0.0,
+        "llama3.3-70b": 0.0,
+        "gpt-oss-120b": 10.0,
+        "deepseek-r1": 5.0
+      }
+    },
+    {
+      "Agent": "gemma3-12b",
+      "Simulated user": {
+        "llama3.1-8b": 0.0,
+        "qwen2.5-7b": 0.0,
+        "gemma3-12b": 0.0,
+        "llama3.3-70b": 10.0,
+        "gpt-oss-120b": 30.0,
+        "deepseek-r1": 15.0
+      }
+    },
+    {
+      "Agent": "llama3.3-70b",
+      "Simulated user": {
+        "llama3.1-8b": 0.0,
+        "qwen2.5-7b": 0.0,
+        "gemma3-12b": 0.0,
+        "llama3.3-70b": 0.0,
+        "gpt-oss-120b": 0.0,
+        "deepseek-r1": 0.0
+      }
+    },
+    {
+      "Agent": "gpt-oss-120b",
+      "Simulated user": {
+        "llama3.1-8b": 0.0,
+        "qwen2.5-7b": 0.0,
+        "gemma3-12b": 0.0,
+        "llama3.3-70b": 70.0,
+        "gpt-oss-120b": 95.0,
+        "deepseek-r1": 5.0
+      }
+    },
+    {
+      "Agent": "deepseek-r1",
+      "Simulated user": {
+        "llama3.1-8b": 0.0,
+        "qwen2.5-7b": 5.0,
+        "gemma3-12b": 0.0,
+        "llama3.3-70b": 55.0,
+        "gpt-oss-120b": 60.0,
+        "deepseek-r1": 10.0
+      }
+    }
+  ],
+  "summary": {
+    "mean_success_rate_pct": 10.42,
+    "max_same_agent_swing_pp": 95.0,
+    "per_agent_swing_pp": [
+      {
+        "Agent": "llama3.1-8b",
+        "swing_pp": 5.0
+      },
+      {
+        "Agent": "qwen2.5-7b",
+        "swing_pp": 10.0
+      },
+      {
+        "Agent": "gemma3-12b",
+        "swing_pp": 30.0
+      },
+      {
+        "Agent": "llama3.3-70b",
+        "swing_pp": 0.0
+      },
+      {
+        "Agent": "gpt-oss-120b",
+        "swing_pp": 95.0
+      },
+      {
+        "Agent": "deepseek-r1",
+        "swing_pp": 60.0
+      }
+    ],
+    "worst_pair_kendall_tau": 0.346
+  },
+  "pairwise_kendall_tau": [
+    {
+      "Simulator A": "llama3.1-8b",
+      "Simulator B": "qwen2.5-7b",
+      "kendall_tau": null
+    },
+    {
+      "Simulator A": "llama3.1-8b",
+      "Simulator B": "gemma3-12b",
+      "kendall_tau": null
+    },
+    {
+      "Simulator A": "llama3.1-8b",
+      "Simulator B": "llama3.3-70b",
+      "kendall_tau": null
+    },
+    {
+      "Simulator A": "llama3.1-8b",
+      "Simulator B": "gpt-oss-120b",
+      "kendall_tau": null
+    },
+    {
+      "Simulator A": "llama3.1-8b",
+      "Simulator B": "deepseek-r1",
+      "kendall_tau": null
+    },
+    {
+      "Simulator A": "qwen2.5-7b",
+      "Simulator B": "gemma3-12b",
+      "kendall_tau": null
+    },
+    {
+      "Simulator A": "qwen2.5-7b",
+      "Simulator B": "llama3.3-70b",
+      "kendall_tau": 0.387
+    },
+    {
+      "Simulator A": "qwen2.5-7b",
+      "Simulator B": "gpt-oss-120b",
+      "kendall_tau": 0.346
+    },
+    {
+      "Simulator A": "qwen2.5-7b",
+      "Simulator B": "deepseek-r1",
+      "kendall_tau": 0.372
+    },
+    {
+      "Simulator A": "gemma3-12b",
+      "Simulator B": "llama3.3-70b",
+      "kendall_tau": null
+    },
+    {
+      "Simulator A": "gemma3-12b",
+      "Simulator B": "gpt-oss-120b",
+      "kendall_tau": null
+    },
+    {
+      "Simulator A": "gemma3-12b",
+      "Simulator B": "deepseek-r1",
+      "kendall_tau": null
+    },
+    {
+      "Simulator A": "llama3.3-70b",
+      "Simulator B": "gpt-oss-120b",
+      "kendall_tau": 0.894
+    },
+    {
+      "Simulator A": "llama3.3-70b",
+      "Simulator B": "deepseek-r1",
+      "kendall_tau": 0.4
+    },
+    {
+      "Simulator A": "gpt-oss-120b",
+      "Simulator B": "deepseek-r1",
+      "kendall_tau": 0.501
+    }
+  ],
+  "t1_variance": {
+    "n_cells": 4,
+    "n_trials_per_cell": 10,
+    "mean_within_cell_std_pp": 10.58,
+    "max_within_cell_std_pp": 19.89,
+    "mean_cross_sim_std_pp": 28.89,
+    "max_cross_sim_std_pp": 42.74,
+    "mean_snr": 1.82,
+    "min_snr": 0.24,
+    "max_snr": 3.06,
+    "per_cell": [
+      {
+        "Agent": "llama3.1-8b",
+        "Simulated user": "llama3.1-8b",
+        "n_trials": 10,
+        "mean_pct": 4.0,
+        "within_std_pp": 8.43,
+        "cross_sim_std_pp": 2.04,
+        "snr": 0.24
+      },
+      {
+        "Agent": "deepseek-r1",
+        "Simulated user": "deepseek-r1",
+        "n_trials": 10,
+        "mean_pct": 0.0,
+        "within_std_pp": 0.0,
+        "cross_sim_std_pp": 28.05,
+        "snr": null
+      },
+      {
+        "Agent": "gpt-oss-120b",
+        "Simulated user": "llama3.3-70b",
+        "n_trials": 10,
+        "mean_pct": 88.0,
+        "within_std_pp": 13.98,
+        "cross_sim_std_pp": 42.74,
+        "snr": 3.06
+      },
+      {
+        "Agent": "gpt-oss-120b",
+        "Simulated user": "gpt-oss-120b",
+        "n_trials": 10,
+        "mean_pct": 82.0,
+        "within_std_pp": 19.89,
+        "cross_sim_std_pp": 42.74,
+        "snr": 2.15
+      }
+    ]
+  },
+  "bootstrap": {
+    "max_swing_mean": 94.92,
+    "max_swing_se": 4.74,
+    "max_swing_ci90": [
+      85.0,
+      100.0
+    ],
+    "worst_tau_mean": -0.515,
+    "worst_tau_se": 0.078,
+    "worst_tau_ci90": [
+      -0.6,
+      -0.467
+    ],
+    "n_resamples": 2000,
+    "n_tasks_per_cell": 20
+  }
+}

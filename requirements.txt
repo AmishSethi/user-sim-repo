@@ -1,0 +1,19 @@
+# Core
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+scikit-learn>=1.3
+
+# Plotting
+matplotlib>=3.7
+
+# HTTP / OpenRouter calls
+httpx>=0.25
+openai>=1.30
+tenacity>=8.2
+
+# τ²-bench framework runs under uv; see README. The wrapper scripts here
+# call subprocess into the upstream tau2-bench tree.
+
+# Optional: vLLM for the n-gram fidelity probe (Appendix A only).
+# Install separately if you need that probe — `pip install vllm` is heavy.

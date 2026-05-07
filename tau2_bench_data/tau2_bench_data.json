@@ -1,0 +1,68 @@
+{
+  "benchmark": "tau2-bench telecom (Sierra Research, arxiv:2506.07982)",
+  "subset": "5 tasks from telecom_full",
+  "panel": [
+    "llama3.1-8b",
+    "qwen2.5-7b",
+    "gemma3-12b",
+    "llama3.3-70b",
+    "gpt-oss-120b",
+    "deepseek-r1"
+  ],
+  "n_dialogues": 180,
+  "n_tasks_per_cell": 5,
+  "n_trials": 1,
+  "max_steps": 40,
+  "sampling": "default (temperature 0.7, top-p 1.0)",
+  "served_via": "OpenRouter (LiteLLM openrouter/<slug>)",
+  "success_rate_pct": {
+    "llama3.1-8b": {
+      "llama3.1-8b": 0.0,
+      "qwen2.5-7b": 40.0,
+      "gemma3-12b": 0.0,
+      "llama3.3-70b": 0.0,
+      "gpt-oss-120b": 20.0,
+      "deepseek-r1": 40.0
+    },
+    "qwen2.5-7b": {
+      "llama3.1-8b": 0.0,
+      "qwen2.5-7b": 0.0,
+      "gemma3-12b": 0.0,
+      "llama3.3-70b": 0.0,
+      "gpt-oss-120b": 0.0,
+      "deepseek-r1": 0.0
+    },
+    "gemma3-12b": {
+      "llama3.1-8b": 0.0,
+      "qwen2.5-7b": 0.0,
+      "gemma3-12b": 0.0,
+      "llama3.3-70b": 0.0,
+      "gpt-oss-120b": 0.0,
+      "deepseek-r1": 0.0
+    },
+    "llama3.3-70b": {
+      "llama3.1-8b": 20.0,
+      "qwen2.5-7b": 20.0,
+      "gemma3-12b": 60.0,
+      "llama3.3-70b": 0.0,
+      "gpt-oss-120b": 60.0,
+      "deepseek-r1": 60.0
+    },
+    "gpt-oss-120b": {
+      "llama3.1-8b": 20.0,
+      "qwen2.5-7b": 80.0,
+      "gemma3-12b": 80.0,
+      "llama3.3-70b": 0.0,
+      "gpt-oss-120b": 60.0,
+      "deepseek-r1": 40.0
+    },
+    "deepseek-r1": {
+      "llama3.1-8b": 0.0,
+      "qwen2.5-7b": 0.0,
+      "gemma3-12b": 20.0,
+      "llama3.3-70b": 0.0,
+      "gpt-oss-120b": 0.0,
+      "deepseek-r1": 0.0
+    }
+  }
+}

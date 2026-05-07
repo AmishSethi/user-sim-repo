@@ -1,0 +1,81 @@
+{
+  "panel": [
+    "llama3.1-8b",
+    "qwen2.5-7b",
+    "gemma3-12b",
+    "llama3.3-70b",
+    "gpt-oss-120b",
+    "deepseek-r1"
+  ],
+  "panel_pretty": [
+    "Llama-3.1-8B",
+    "Qwen2.5-7B",
+    "Gemma-3-12B",
+    "Llama-3.3-70B",
+    "gpt-oss-120B",
+    "DeepSeek-R1"
+  ],
+  "schema": {
+    "max_same_agent_swing_pp": "max over agents of (max_sim - min_sim) in percentage points",
+    "worst_pair_kendall_tau": "min Kendall tau over simulator pairs whose induced rankings are non-degenerate; 1 = identical ranking, 0 = uncorrelated, negative = inverted",
+    "t1_mean_snr": "mean signal-to-noise ratio (cross-sim std / within-cell std) of the K=10 within-cell variance study; larger is more robust to noise"
+  },
+  "benchmarks": [
+    {
+      "name": "MINT",
+      "subset": "50 tasks across GSM8K, HotpotQA, MMLU",
+      "n_dialogues": 1800,
+      "n_tasks_per_cell": 50,
+      "n_trials": 1,
+      "max_steps": 8,
+      "mean_success_rate_pct": 65.39,
+      "max_same_agent_swing_pp": 40.0,
+      "worst_pair_kendall_tau": 0.333,
+      "t1_mean_within_cell_std_pp": 4.18,
+      "t1_mean_cross_sim_std_pp": 14.1,
+      "t1_mean_snr": 3.52
+    },
+    {
+      "name": "24-task customer-service",
+      "subset": "24 multi-turn customer-service tasks (airline, retail, account, billing)",
+      "n_dialogues": 3024,
+      "n_tasks_per_cell": 24,
+      "n_trials": 3,
+      "max_steps": 8,
+      "mean_success_rate_pct": 68.36,
+      "max_same_agent_swing_pp": 20.8,
+      "worst_pair_kendall_tau": 0.414,
+      "t1_mean_within_cell_std_pp": 4.38,
+      "t1_mean_cross_sim_std_pp": 5.52,
+      "t1_mean_snr": 1.33
+    },
+    {
+      "name": "AgentClinic-MedQA",
+      "subset": "30-case subset of AgentClinic-MedQA",
+      "n_dialogues": 1080,
+      "n_tasks_per_cell": 30,
+      "n_trials": 1,
+      "max_steps": 8,
+      "mean_success_rate_pct": 33.98,
+      "max_same_agent_swing_pp": 16.7,
+      "worst_pair_kendall_tau": 0.333,
+      "t1_mean_within_cell_std_pp": 4.32,
+      "t1_mean_cross_sim_std_pp": 5.69,
+      "t1_mean_snr": 1.36
+    },
+    {
+      "name": "tau-bench airline",
+      "subset": "5 tasks from tau-bench airline (Yao et al. 2024)",
+      "n_dialogues": 180,
+      "n_tasks_per_cell": 5,
+      "n_trials": 1,
+      "max_steps": 40,
+      "mean_success_rate_pct": 74.44,
+      "max_same_agent_swing_pp": 80.0,
+      "worst_pair_kendall_tau": 0.0,
+      "t1_mean_within_cell_std_pp": 17.55,
+      "t1_mean_cross_sim_std_pp": 20.22,
+      "t1_mean_snr": 1.16
+    }
+  ]
+}

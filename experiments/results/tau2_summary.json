@@ -1,0 +1,108 @@
+{
+  "n_dialogues": 720,
+  "n_sims": 6,
+  "n_agents": 6,
+  "mean_success_rate_pct": 10.416666666666666,
+  "max_score_swing_pp": 95.0,
+  "worst_pair_kendall_tau": 0.34641016151377546,
+  "pivot": {
+    "llama3.1-8b": {
+      "llama3.1-8b": 0.0,
+      "qwen2.5-7b": 0.0,
+      "gemma3-12b": 0.0,
+      "llama3.3-70b": 0.0,
+      "gpt-oss-120b": 5.0,
+      "deepseek-r1": 0.0
+    },
+    "qwen2.5-7b": {
+      "llama3.1-8b": 0.0,
+      "qwen2.5-7b": 0.0,
+      "gemma3-12b": 0.0,
+      "llama3.3-70b": 0.0,
+      "gpt-oss-120b": 10.0,
+      "deepseek-r1": 5.0
+    },
+    "gemma3-12b": {
+      "llama3.1-8b": 0.0,
+      "qwen2.5-7b": 0.0,
+      "gemma3-12b": 0.0,
+      "llama3.3-70b": 10.0,
+      "gpt-oss-120b": 30.0,
+      "deepseek-r1": 15.0
+    },
+    "llama3.3-70b": {
+      "llama3.1-8b": 0.0,
+      "qwen2.5-7b": 0.0,
+      "gemma3-12b": 0.0,
+      "llama3.3-70b": 0.0,
+      "gpt-oss-120b": 0.0,
+      "deepseek-r1": 0.0
+    },
+    "gpt-oss-120b": {
+      "llama3.1-8b": 0.0,
+      "qwen2.5-7b": 0.0,
+      "gemma3-12b": 0.0,
+      "llama3.3-70b": 70.0,
+      "gpt-oss-120b": 95.0,
+      "deepseek-r1": 5.0
+    },
+    "deepseek-r1": {
+      "llama3.1-8b": 0.0,
+      "qwen2.5-7b": 5.0,
+      "gemma3-12b": 0.0,
+      "llama3.3-70b": 55.0,
+      "gpt-oss-120b": 60.0,
+      "deepseek-r1": 10.0
+    }
+  },
+  "kendall": {
+    "llama3.1-8b": {
+      "llama3.1-8b": NaN,
+      "qwen2.5-7b": NaN,
+      "gemma3-12b": NaN,
+      "llama3.3-70b": NaN,
+      "gpt-oss-120b": NaN,
+      "deepseek-r1": NaN
+    },
+    "qwen2.5-7b": {
+      "llama3.1-8b": NaN,
+      "qwen2.5-7b": NaN,
+      "gemma3-12b": NaN,
+      "llama3.3-70b": 0.39,
+      "gpt-oss-120b": 0.35,
+      "deepseek-r1": 0.37
+    },
+    "gemma3-12b": {
+      "llama3.1-8b": NaN,
+      "qwen2.5-7b": NaN,
+      "gemma3-12b": NaN,
+      "llama3.3-70b": NaN,
+      "gpt-oss-120b": NaN,
+      "deepseek-r1": NaN
+    },
+    "llama3.3-70b": {
+      "llama3.1-8b": NaN,
+      "qwen2.5-7b": 0.39,
+      "gemma3-12b": NaN,
+      "llama3.3-70b": NaN,
+      "gpt-oss-120b": 0.89,
+      "deepseek-r1": 0.4
+    },
+    "gpt-oss-120b": {
+      "llama3.1-8b": NaN,
+      "qwen2.5-7b": 0.35,
+      "gemma3-12b": NaN,
+      "llama3.3-70b": 0.89,
+      "gpt-oss-120b": NaN,
+      "deepseek-r1": 0.5
+    },
+    "deepseek-r1": {
+      "llama3.1-8b": NaN,
+      "qwen2.5-7b": 0.37,
+      "gemma3-12b": NaN,
+      "llama3.3-70b": 0.4,
+      "gpt-oss-120b": 0.5,
+      "deepseek-r1": NaN
+    }
+  }
+}

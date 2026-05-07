@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.python-version
+
+# Tooling
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Build / temp artifacts
+*.log
+texput.log
+server_logs/
+
+# External benchmark frameworks (clone fresh; see README)
+experiments/external/*/
+!experiments/external/.gitkeep
+
+# Local figure outputs (regenerable)
+figures/
+
+# Secrets
+.env
+*.pem

@@ -1,0 +1,18 @@
+{
+  "human_held_out_nll_mean": 6.593663866530696,
+  "human_held_out_nll_std": 0.5903125387853654,
+  "human_held_out_nll_n": 69,
+  "llama3.1-8b_nll_mean": 6.460746933905048,
+  "llama3.1-8b_nll_std": 0.6933559671039917,
+  "llama3.1-8b_n": 800,
+  "qwen2.5-3b_nll_mean": 6.674508771720031,
+  "qwen2.5-3b_nll_std": 0.7049537671275669,
+  "qwen2.5-3b_n": 800,
+  "phi4-mini_nll_mean": 6.601975381615225,
+  "phi4-mini_nll_std": 0.6364176836552056,
+  "phi4-mini_n": 800,
+  "classifier_accuracy_mean": 0.9720541015512725,
+  "classifier_accuracy_std": 0.0007883650458647917,
+  "classifier_auroc_mean": 0.9240728021978022,
+  "classifier_auroc_std": 0.018234208170256207
+}

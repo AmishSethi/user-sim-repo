@@ -1,0 +1,329 @@
+{
+  "24-task CS": {
+    "n_dialogues": 3024,
+    "n_sims": 6,
+    "n_agents": 6,
+    "mean_success_rate_pct": 68.3641975308642,
+    "max_score_swing_pp": 51.388888888888886,
+    "mean_per_agent_variance": 31.357167352537715,
+    "worst_pair_kendall_tau": 0.41403933560541256,
+    "pivot": {
+      "llama3.1-8b": {
+        "llama3.1-8b": 47.2,
+        "qwen2.5-7b": 45.8,
+        "gemma3-12b": 50.0,
+        "llama3.3-70b": 40.3,
+        "gpt-oss-120b": 47.2,
+        "deepseek-r1": 55.6
+      },
+      "qwen2.5-7b": {
+        "llama3.1-8b": 38.9,
+        "qwen2.5-7b": 47.2,
+        "gemma3-12b": 47.2,
+        "llama3.3-70b": 40.3,
+        "gpt-oss-120b": 37.5,
+        "deepseek-r1": 41.7
+      },
+      "gemma3-12b": {
+        "llama3.1-8b": 68.1,
+        "qwen2.5-7b": 84.7,
+        "gemma3-12b": 83.3,
+        "llama3.3-70b": 88.9,
+        "gpt-oss-120b": 83.3,
+        "deepseek-r1": 73.6
+      },
+      "llama3.3-70b": {
+        "llama3.1-8b": 65.3,
+        "qwen2.5-7b": 81.9,
+        "gemma3-12b": 80.6,
+        "llama3.3-70b": 84.7,
+        "gpt-oss-120b": 81.9,
+        "deepseek-r1": 77.8
+      },
+      "gpt-oss-120b": {
+        "llama3.1-8b": 75.0,
+        "qwen2.5-7b": 86.1,
+        "gemma3-12b": 84.7,
+        "llama3.3-70b": 86.1,
+        "gpt-oss-120b": 84.7,
+        "deepseek-r1": 84.7
+      },
+      "deepseek-r1": {
+        "llama3.1-8b": 73.6,
+        "qwen2.5-7b": 77.8,
+        "gemma3-12b": 80.6,
+        "llama3.3-70b": 72.2,
+        "gpt-oss-120b": 83.3,
+        "deepseek-r1": 79.2
+      }
+    },
+    "kendall": {
+      "llama3.1-8b": {
+        "llama3.1-8b": 1.0,
+        "qwen2.5-7b": 0.6,
+        "gemma3-12b": 0.83,
+        "llama3.3-70b": 0.55,
+        "gpt-oss-120b": 0.97,
+        "deepseek-r1": 0.87
+      },
+      "qwen2.5-7b": {
+        "llama3.1-8b": 0.6,
+        "qwen2.5-7b": 1.0,
+        "gemma3-12b": 0.83,
+        "llama3.3-70b": 0.83,
+        "gpt-oss-120b": 0.69,
+        "deepseek-r1": 0.47
+      },
+      "gemma3-12b": {
+        "llama3.1-8b": 0.83,
+        "qwen2.5-7b": 0.83,
+        "gemma3-12b": 1.0,
+        "llama3.3-70b": 0.79,
+        "gpt-oss-120b": 0.93,
+        "deepseek-r1": 0.69
+      },
+      "llama3.3-70b": {
+        "llama3.1-8b": 0.55,
+        "qwen2.5-7b": 0.83,
+        "gemma3-12b": 0.79,
+        "llama3.3-70b": 1.0,
+        "gpt-oss-120b": 0.64,
+        "deepseek-r1": 0.41
+      },
+      "gpt-oss-120b": {
+        "llama3.1-8b": 0.97,
+        "qwen2.5-7b": 0.69,
+        "gemma3-12b": 0.93,
+        "llama3.3-70b": 0.64,
+        "gpt-oss-120b": 1.0,
+        "deepseek-r1": 0.83
+      },
+      "deepseek-r1": {
+        "llama3.1-8b": 0.87,
+        "qwen2.5-7b": 0.47,
+        "gemma3-12b": 0.69,
+        "llama3.3-70b": 0.41,
+        "gpt-oss-120b": 0.83,
+        "deepseek-r1": 1.0
+      }
+    }
+  },
+  "MINT (50)": {
+    "n_dialogues": 1800,
+    "n_sims": 6,
+    "n_agents": 6,
+    "mean_success_rate_pct": 65.38888888888889,
+    "max_score_swing_pp": 62.0,
+    "mean_per_agent_variance": 172.8222222222222,
+    "worst_pair_kendall_tau": 0.3333333333333333,
+    "pivot": {
+      "llama3.1-8b": {
+        "llama3.1-8b": 44.0,
+        "qwen2.5-7b": 56.0,
+        "gemma3-12b": 58.0,
+        "llama3.3-70b": 68.0,
+        "gpt-oss-120b": 80.0,
+        "deepseek-r1": 74.0
+      },
+      "qwen2.5-7b": {
+        "llama3.1-8b": 36.0,
+        "qwen2.5-7b": 52.0,
+        "gemma3-12b": 38.0,
+        "llama3.3-70b": 56.0,
+        "gpt-oss-120b": 68.0,
+        "deepseek-r1": 76.0
+      },
+      "gemma3-12b": {
+        "llama3.1-8b": 34.0,
+        "qwen2.5-7b": 52.0,
+        "gemma3-12b": 30.0,
+        "llama3.3-70b": 60.0,
+        "gpt-oss-120b": 70.0,
+        "deepseek-r1": 66.0
+      },
+      "llama3.3-70b": {
+        "llama3.1-8b": 68.0,
+        "qwen2.5-7b": 76.0,
+        "gemma3-12b": 68.0,
+        "llama3.3-70b": 76.0,
+        "gpt-oss-120b": 88.0,
+        "deepseek-r1": 84.0
+      },
+      "gpt-oss-120b": {
+        "llama3.1-8b": 62.0,
+        "qwen2.5-7b": 78.0,
+        "gemma3-12b": 64.0,
+        "llama3.3-70b": 84.0,
+        "gpt-oss-120b": 92.0,
+        "deepseek-r1": 92.0
+      },
+      "deepseek-r1": {
+        "llama3.1-8b": 62.0,
+        "qwen2.5-7b": 60.0,
+        "gemma3-12b": 66.0,
+        "llama3.3-70b": 58.0,
+        "gpt-oss-120b": 80.0,
+        "deepseek-r1": 78.0
+      }
+    },
+    "kendall": {
+      "llama3.1-8b": {
+        "llama3.1-8b": 1.0,
+        "qwen2.5-7b": 0.79,
+        "gemma3-12b": 0.97,
+        "llama3.3-70b": 0.41,
+        "gpt-oss-120b": 0.64,
+        "deepseek-r1": 0.69
+      },
+      "qwen2.5-7b": {
+        "llama3.1-8b": 0.79,
+        "qwen2.5-7b": 1.0,
+        "gemma3-12b": 0.69,
+        "llama3.3-70b": 0.69,
+        "gpt-oss-120b": 0.93,
+        "deepseek-r1": 0.83
+      },
+      "gemma3-12b": {
+        "llama3.1-8b": 0.97,
+        "qwen2.5-7b": 0.69,
+        "gemma3-12b": 1.0,
+        "llama3.3-70b": 0.33,
+        "gpt-oss-120b": 0.55,
+        "deepseek-r1": 0.6
+      },
+      "llama3.3-70b": {
+        "llama3.1-8b": 0.41,
+        "qwen2.5-7b": 0.69,
+        "gemma3-12b": 0.33,
+        "llama3.3-70b": 1.0,
+        "gpt-oss-120b": 0.83,
+        "deepseek-r1": 0.47
+      },
+      "gpt-oss-120b": {
+        "llama3.1-8b": 0.64,
+        "qwen2.5-7b": 0.93,
+        "gemma3-12b": 0.55,
+        "llama3.3-70b": 0.83,
+        "gpt-oss-120b": 1.0,
+        "deepseek-r1": 0.69
+      },
+      "deepseek-r1": {
+        "llama3.1-8b": 0.69,
+        "qwen2.5-7b": 0.83,
+        "gemma3-12b": 0.6,
+        "llama3.3-70b": 0.47,
+        "gpt-oss-120b": 0.69,
+        "deepseek-r1": 1.0
+      }
+    }
+  },
+  "AgentClinic": {
+    "n_dialogues": 1080,
+    "n_sims": 6,
+    "n_agents": 6,
+    "mean_success_rate_pct": 33.98148148148148,
+    "max_score_swing_pp": 46.666666666666664,
+    "mean_per_agent_variance": 28.209876543209873,
+    "worst_pair_kendall_tau": 0.3333333333333333,
+    "pivot": {
+      "llama3.1-8b": {
+        "llama3.1-8b": 23.3,
+        "qwen2.5-7b": 20.0,
+        "gemma3-12b": 13.3,
+        "llama3.3-70b": 20.0,
+        "gpt-oss-120b": 30.0,
+        "deepseek-r1": 23.3
+      },
+      "qwen2.5-7b": {
+        "llama3.1-8b": 26.7,
+        "qwen2.5-7b": 30.0,
+        "gemma3-12b": 23.3,
+        "llama3.3-70b": 20.0,
+        "gpt-oss-120b": 23.3,
+        "deepseek-r1": 26.7
+      },
+      "gemma3-12b": {
+        "llama3.1-8b": 23.3,
+        "qwen2.5-7b": 23.3,
+        "gemma3-12b": 33.3,
+        "llama3.3-70b": 36.7,
+        "gpt-oss-120b": 20.0,
+        "deepseek-r1": 30.0
+      },
+      "llama3.3-70b": {
+        "llama3.1-8b": 36.7,
+        "qwen2.5-7b": 33.3,
+        "gemma3-12b": 26.7,
+        "llama3.3-70b": 20.0,
+        "gpt-oss-120b": 26.7,
+        "deepseek-r1": 33.3
+      },
+      "gpt-oss-120b": {
+        "llama3.1-8b": 53.3,
+        "qwen2.5-7b": 56.7,
+        "gemma3-12b": 53.3,
+        "llama3.3-70b": 46.7,
+        "gpt-oss-120b": 60.0,
+        "deepseek-r1": 60.0
+      },
+      "deepseek-r1": {
+        "llama3.1-8b": 50.0,
+        "qwen2.5-7b": 46.7,
+        "gemma3-12b": 43.3,
+        "llama3.3-70b": 40.0,
+        "gpt-oss-120b": 50.0,
+        "deepseek-r1": 40.0
+      }
+    },
+    "kendall": {
+      "llama3.1-8b": {
+        "llama3.1-8b": 1.0,
+        "qwen2.5-7b": 0.97,
+        "gemma3-12b": 0.69,
+        "llama3.3-70b": 0.54,
+        "gpt-oss-120b": 0.69,
+        "deepseek-r1": 0.83
+      },
+      "qwen2.5-7b": {
+        "llama3.1-8b": 0.97,
+        "qwen2.5-7b": 1.0,
+        "gemma3-12b": 0.73,
+        "llama3.3-70b": 0.6,
+        "gpt-oss-120b": 0.6,
+        "deepseek-r1": 0.87
+      },
+      "gemma3-12b": {
+        "llama3.1-8b": 0.69,
+        "qwen2.5-7b": 0.73,
+        "gemma3-12b": 1.0,
+        "llama3.3-70b": 0.89,
+        "gpt-oss-120b": 0.33,
+        "deepseek-r1": 0.87
+      },
+      "llama3.3-70b": {
+        "llama3.1-8b": 0.54,
+        "qwen2.5-7b": 0.6,
+        "gemma3-12b": 0.89,
+        "llama3.3-70b": 1.0,
+        "gpt-oss-120b": 0.45,
+        "deepseek-r1": 0.75
+      },
+      "gpt-oss-120b": {
+        "llama3.1-8b": 0.69,
+        "qwen2.5-7b": 0.6,
+        "gemma3-12b": 0.33,
+        "llama3.3-70b": 0.45,
+        "gpt-oss-120b": 1.0,
+        "deepseek-r1": 0.47
+      },
+      "deepseek-r1": {
+        "llama3.1-8b": 0.83,
+        "qwen2.5-7b": 0.87,
+        "gemma3-12b": 0.87,
+        "llama3.3-70b": 0.75,
+        "gpt-oss-120b": 0.47,
+        "deepseek-r1": 1.0
+      }
+    }
+  }
+}

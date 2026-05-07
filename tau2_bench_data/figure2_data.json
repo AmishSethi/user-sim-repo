@@ -1,0 +1,1506 @@
+{
+  "panel": [
+    "llama3.1-8b",
+    "qwen2.5-7b",
+    "gemma3-12b",
+    "llama3.3-70b",
+    "gpt-oss-120b",
+    "deepseek-r1"
+  ],
+  "panel_pretty": [
+    "Llama-3.1-8B",
+    "Qwen2.5-7B",
+    "Gemma-3-12B",
+    "Llama-3.3-70B",
+    "gpt-oss-120B",
+    "DeepSeek-R1"
+  ],
+  "schema": {
+    "success_matrix": "list of one entry per agent. Each entry has \"Agent\" (alias) and \"Simulated user\" (mapping from simulator alias to percent success rate of that agent under that simulator).",
+    "max_same_agent_swing_pp": "max over agents of (max_sim - min_sim) in percentage points",
+    "per_agent_swing_pp": "list of one entry per agent giving the cross-simulator swing for that agent",
+    "worst_pair_kendall_tau": "minimum Kendall tau over simulator pairs whose induced agent rankings are not both degenerate",
+    "pairwise_kendall_tau": "list of undirected simulator pairs with the Kendall tau between their induced agent rankings",
+    "t1_variance": "K=10 trial replication on diagnostic cells; per_cell rows give per-cell Agent, Simulated user, n_trials, mean_pct, within_std_pp, cross_sim_std_pp, snr",
+    "bootstrap": "B=2000 task-resampling bootstrap; max_swing_ci90 and worst_tau_ci90 are 5th to 95th percentile"
+  },
+  "benchmarks": {
+    "MINT": {
+      "subset": "50 tasks across GSM8K, HotpotQA, MMLU",
+      "n_dialogues": 1800,
+      "n_tasks_per_cell": 50,
+      "n_trials": 1,
+      "max_steps": 8,
+      "success_matrix": [
+        {
+          "Agent": "llama3.1-8b",
+          "Simulated user": {
+            "llama3.1-8b": 44.0,
+            "qwen2.5-7b": 56.0,
+            "gemma3-12b": 58.0,
+            "llama3.3-70b": 68.0,
+            "gpt-oss-120b": 80.0,
+            "deepseek-r1": 74.0
+          }
+        },
+        {
+          "Agent": "qwen2.5-7b",
+          "Simulated user": {
+            "llama3.1-8b": 36.0,
+            "qwen2.5-7b": 52.0,
+            "gemma3-12b": 38.0,
+            "llama3.3-70b": 56.0,
+            "gpt-oss-120b": 68.0,
+            "deepseek-r1": 76.0
+          }
+        },
+        {
+          "Agent": "gemma3-12b",
+          "Simulated user": {
+            "llama3.1-8b": 34.0,
+            "qwen2.5-7b": 52.0,
+            "gemma3-12b": 30.0,
+            "llama3.3-70b": 60.0,
+            "gpt-oss-120b": 70.0,
+            "deepseek-r1": 66.0
+          }
+        },
+        {
+          "Agent": "llama3.3-70b",
+          "Simulated user": {
+            "llama3.1-8b": 68.0,
+            "qwen2.5-7b": 76.0,
+            "gemma3-12b": 68.0,
+            "llama3.3-70b": 76.0,
+            "gpt-oss-120b": 88.0,
+            "deepseek-r1": 84.0
+          }
+        },
+        {
+          "Agent": "gpt-oss-120b",
+          "Simulated user": {
+            "llama3.1-8b": 62.0,
+            "qwen2.5-7b": 78.0,
+            "gemma3-12b": 64.0,
+            "llama3.3-70b": 84.0,
+            "gpt-oss-120b": 92.0,
+            "deepseek-r1": 92.0
+          }
+        },
+        {
+          "Agent": "deepseek-r1",
+          "Simulated user": {
+            "llama3.1-8b": 62.0,
+            "qwen2.5-7b": 60.0,
+            "gemma3-12b": 66.0,
+            "llama3.3-70b": 58.0,
+            "gpt-oss-120b": 80.0,
+            "deepseek-r1": 78.0
+          }
+        }
+      ],
+      "mean_success_rate_pct": 65.39,
+      "max_same_agent_swing_pp": 40.0,
+      "per_agent_swing_pp": [
+        {
+          "Agent": "llama3.1-8b",
+          "swing_pp": 36.0
+        },
+        {
+          "Agent": "qwen2.5-7b",
+          "swing_pp": 40.0
+        },
+        {
+          "Agent": "gemma3-12b",
+          "swing_pp": 40.0
+        },
+        {
+          "Agent": "llama3.3-70b",
+          "swing_pp": 20.0
+        },
+        {
+          "Agent": "gpt-oss-120b",
+          "swing_pp": 30.0
+        },
+        {
+          "Agent": "deepseek-r1",
+          "swing_pp": 22.0
+        }
+      ],
+      "worst_pair_kendall_tau": 0.333,
+      "pairwise_kendall_tau": [
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "qwen2.5-7b",
+          "kendall_tau": 0.786
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "gemma3-12b",
+          "kendall_tau": 0.966
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "llama3.3-70b",
+          "kendall_tau": 0.414
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": 0.643
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.69
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "gemma3-12b",
+          "kendall_tau": 0.69
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "llama3.3-70b",
+          "kendall_tau": 0.69
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": 0.929
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.828
+        },
+        {
+          "Simulator A": "gemma3-12b",
+          "Simulator B": "llama3.3-70b",
+          "kendall_tau": 0.333
+        },
+        {
+          "Simulator A": "gemma3-12b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": 0.552
+        },
+        {
+          "Simulator A": "gemma3-12b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.6
+        },
+        {
+          "Simulator A": "llama3.3-70b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": 0.828
+        },
+        {
+          "Simulator A": "llama3.3-70b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.467
+        },
+        {
+          "Simulator A": "gpt-oss-120b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.69
+        }
+      ],
+      "t1_variance": {
+        "n_cells": 4,
+        "n_trials_per_cell": 10,
+        "mean_within_cell_std_pp": 4.18,
+        "max_within_cell_std_pp": 5.08,
+        "mean_cross_sim_std_pp": 14.1,
+        "max_cross_sim_std_pp": 16.69,
+        "mean_snr": 3.52,
+        "min_snr": 2.6,
+        "max_snr": 5.1,
+        "per_cell": [
+          {
+            "Agent": "llama3.1-8b",
+            "Simulated user": "deepseek-r1",
+            "n_trials": 10,
+            "mean_pct": 74.0,
+            "within_std_pp": 5.08,
+            "cross_sim_std_pp": 13.19,
+            "snr": 2.6
+          },
+          {
+            "Agent": "gemma3-12b",
+            "Simulated user": "gemma3-12b",
+            "n_trials": 10,
+            "mean_pct": 30.0,
+            "within_std_pp": 3.27,
+            "cross_sim_std_pp": 16.69,
+            "snr": 5.1
+          },
+          {
+            "Agent": "gpt-oss-120b",
+            "Simulated user": "gpt-oss-120b",
+            "n_trials": 10,
+            "mean_pct": 92.0,
+            "within_std_pp": 4.6,
+            "cross_sim_std_pp": 13.25,
+            "snr": 2.88
+          },
+          {
+            "Agent": "gpt-oss-120b",
+            "Simulated user": "llama3.1-8b",
+            "n_trials": 10,
+            "mean_pct": 62.0,
+            "within_std_pp": 3.78,
+            "cross_sim_std_pp": 13.25,
+            "snr": 3.51
+          }
+        ]
+      },
+      "bootstrap": {
+        "max_swing_mean": 48.62,
+        "max_swing_se": 6.0,
+        "max_swing_ci90": [
+          40.0,
+          58.0
+        ],
+        "worst_tau_mean": 0.109,
+        "worst_tau_se": 0.182,
+        "worst_tau_ci90": [
+          -0.2,
+          0.333
+        ],
+        "n_resamples": 2000,
+        "n_tasks_per_cell": 50
+      }
+    },
+    "24-task customer-service": {
+      "subset": "24 multi-turn customer-service tasks (airline, retail, account, billing)",
+      "n_dialogues": 3024,
+      "n_tasks_per_cell": 24,
+      "n_trials": 3,
+      "max_steps": 8,
+      "success_matrix": [
+        {
+          "Agent": "llama3.1-8b",
+          "Simulated user": {
+            "llama3.1-8b": 47.2,
+            "qwen2.5-7b": 45.8,
+            "gemma3-12b": 50.0,
+            "llama3.3-70b": 40.3,
+            "gpt-oss-120b": 47.2,
+            "deepseek-r1": 55.6
+          }
+        },
+        {
+          "Agent": "qwen2.5-7b",
+          "Simulated user": {
+            "llama3.1-8b": 38.9,
+            "qwen2.5-7b": 47.2,
+            "gemma3-12b": 47.2,
+            "llama3.3-70b": 40.3,
+            "gpt-oss-120b": 37.5,
+            "deepseek-r1": 41.7
+          }
+        },
+        {
+          "Agent": "gemma3-12b",
+          "Simulated user": {
+            "llama3.1-8b": 68.1,
+            "qwen2.5-7b": 84.7,
+            "gemma3-12b": 83.3,
+            "llama3.3-70b": 88.9,
+            "gpt-oss-120b": 83.3,
+            "deepseek-r1": 73.6
+          }
+        },
+        {
+          "Agent": "llama3.3-70b",
+          "Simulated user": {
+            "llama3.1-8b": 65.3,
+            "qwen2.5-7b": 81.9,
+            "gemma3-12b": 80.6,
+            "llama3.3-70b": 84.7,
+            "gpt-oss-120b": 81.9,
+            "deepseek-r1": 77.8
+          }
+        },
+        {
+          "Agent": "gpt-oss-120b",
+          "Simulated user": {
+            "llama3.1-8b": 75.0,
+            "qwen2.5-7b": 86.1,
+            "gemma3-12b": 84.7,
+            "llama3.3-70b": 86.1,
+            "gpt-oss-120b": 84.7,
+            "deepseek-r1": 84.7
+          }
+        },
+        {
+          "Agent": "deepseek-r1",
+          "Simulated user": {
+            "llama3.1-8b": 73.6,
+            "qwen2.5-7b": 77.8,
+            "gemma3-12b": 80.6,
+            "llama3.3-70b": 72.2,
+            "gpt-oss-120b": 83.3,
+            "deepseek-r1": 79.2
+          }
+        }
+      ],
+      "mean_success_rate_pct": 68.36,
+      "max_same_agent_swing_pp": 20.8,
+      "per_agent_swing_pp": [
+        {
+          "Agent": "llama3.1-8b",
+          "swing_pp": 15.3
+        },
+        {
+          "Agent": "qwen2.5-7b",
+          "swing_pp": 9.7
+        },
+        {
+          "Agent": "gemma3-12b",
+          "swing_pp": 20.8
+        },
+        {
+          "Agent": "llama3.3-70b",
+          "swing_pp": 19.4
+        },
+        {
+          "Agent": "gpt-oss-120b",
+          "swing_pp": 11.1
+        },
+        {
+          "Agent": "deepseek-r1",
+          "swing_pp": 11.1
+        }
+      ],
+      "worst_pair_kendall_tau": 0.414,
+      "pairwise_kendall_tau": [
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "qwen2.5-7b",
+          "kendall_tau": 0.6
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "gemma3-12b",
+          "kendall_tau": 0.828
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "llama3.3-70b",
+          "kendall_tau": 0.552
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": 0.966
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.867
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "gemma3-12b",
+          "kendall_tau": 0.828
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "llama3.3-70b",
+          "kendall_tau": 0.828
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": 0.69
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.467
+        },
+        {
+          "Simulator A": "gemma3-12b",
+          "Simulator B": "llama3.3-70b",
+          "kendall_tau": 0.786
+        },
+        {
+          "Simulator A": "gemma3-12b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": 0.929
+        },
+        {
+          "Simulator A": "gemma3-12b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.69
+        },
+        {
+          "Simulator A": "llama3.3-70b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": 0.643
+        },
+        {
+          "Simulator A": "llama3.3-70b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.414
+        },
+        {
+          "Simulator A": "gpt-oss-120b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.828
+        }
+      ],
+      "t1_variance": {
+        "n_cells": 4,
+        "n_trials_per_cell": 10,
+        "mean_within_cell_std_pp": 4.38,
+        "max_within_cell_std_pp": 5.27,
+        "mean_cross_sim_std_pp": 5.52,
+        "max_cross_sim_std_pp": 7.83,
+        "mean_snr": 1.33,
+        "min_snr": 0.95,
+        "max_snr": 2.3,
+        "per_cell": [
+          {
+            "Agent": "deepseek-r1",
+            "Simulated user": "deepseek-r1",
+            "n_trials": 10,
+            "mean_pct": 79.2,
+            "within_std_pp": 4.03,
+            "cross_sim_std_pp": 4.21,
+            "snr": 1.04
+          },
+          {
+            "Agent": "llama3.1-8b",
+            "Simulated user": "gpt-oss-120b",
+            "n_trials": 10,
+            "mean_pct": 47.2,
+            "within_std_pp": 5.27,
+            "cross_sim_std_pp": 5.02,
+            "snr": 0.95
+          },
+          {
+            "Agent": "gemma3-12b",
+            "Simulated user": "llama3.3-70b",
+            "n_trials": 10,
+            "mean_pct": 88.9,
+            "within_std_pp": 3.4,
+            "cross_sim_std_pp": 7.83,
+            "snr": 2.3
+          },
+          {
+            "Agent": "llama3.1-8b",
+            "Simulated user": "qwen2.5-7b",
+            "n_trials": 10,
+            "mean_pct": 45.8,
+            "within_std_pp": 4.83,
+            "cross_sim_std_pp": 5.02,
+            "snr": 1.04
+          }
+        ]
+      },
+      "bootstrap": {
+        "max_swing_mean": 27.5,
+        "max_swing_se": 4.69,
+        "max_swing_ci90": [
+          20.8,
+          36.1
+        ],
+        "worst_tau_mean": 0.246,
+        "worst_tau_se": 0.115,
+        "worst_tau_ci90": [
+          0.067,
+          0.467
+        ],
+        "n_resamples": 2000,
+        "n_tasks_per_cell": 72
+      }
+    },
+    "AgentClinic-MedQA": {
+      "subset": "30-case subset of AgentClinic-MedQA",
+      "n_dialogues": 1080,
+      "n_tasks_per_cell": 30,
+      "n_trials": 1,
+      "max_steps": 8,
+      "success_matrix": [
+        {
+          "Agent": "llama3.1-8b",
+          "Simulated user": {
+            "llama3.1-8b": 23.3,
+            "qwen2.5-7b": 20.0,
+            "gemma3-12b": 13.3,
+            "llama3.3-70b": 20.0,
+            "gpt-oss-120b": 30.0,
+            "deepseek-r1": 23.3
+          }
+        },
+        {
+          "Agent": "qwen2.5-7b",
+          "Simulated user": {
+            "llama3.1-8b": 26.7,
+            "qwen2.5-7b": 30.0,
+            "gemma3-12b": 23.3,
+            "llama3.3-70b": 20.0,
+            "gpt-oss-120b": 23.3,
+            "deepseek-r1": 26.7
+          }
+        },
+        {
+          "Agent": "gemma3-12b",
+          "Simulated user": {
+            "llama3.1-8b": 23.3,
+            "qwen2.5-7b": 23.3,
+            "gemma3-12b": 33.3,
+            "llama3.3-70b": 36.7,
+            "gpt-oss-120b": 20.0,
+            "deepseek-r1": 30.0
+          }
+        },
+        {
+          "Agent": "llama3.3-70b",
+          "Simulated user": {
+            "llama3.1-8b": 36.7,
+            "qwen2.5-7b": 33.3,
+            "gemma3-12b": 26.7,
+            "llama3.3-70b": 20.0,
+            "gpt-oss-120b": 26.7,
+            "deepseek-r1": 33.3
+          }
+        },
+        {
+          "Agent": "gpt-oss-120b",
+          "Simulated user": {
+            "llama3.1-8b": 53.3,
+            "qwen2.5-7b": 56.7,
+            "gemma3-12b": 53.3,
+            "llama3.3-70b": 46.7,
+            "gpt-oss-120b": 60.0,
+            "deepseek-r1": 60.0
+          }
+        },
+        {
+          "Agent": "deepseek-r1",
+          "Simulated user": {
+            "llama3.1-8b": 50.0,
+            "qwen2.5-7b": 46.7,
+            "gemma3-12b": 43.3,
+            "llama3.3-70b": 40.0,
+            "gpt-oss-120b": 50.0,
+            "deepseek-r1": 40.0
+          }
+        }
+      ],
+      "mean_success_rate_pct": 33.98,
+      "max_same_agent_swing_pp": 16.7,
+      "per_agent_swing_pp": [
+        {
+          "Agent": "llama3.1-8b",
+          "swing_pp": 16.7
+        },
+        {
+          "Agent": "qwen2.5-7b",
+          "swing_pp": 10.0
+        },
+        {
+          "Agent": "gemma3-12b",
+          "swing_pp": 16.7
+        },
+        {
+          "Agent": "llama3.3-70b",
+          "swing_pp": 16.7
+        },
+        {
+          "Agent": "gpt-oss-120b",
+          "swing_pp": 13.3
+        },
+        {
+          "Agent": "deepseek-r1",
+          "swing_pp": 10.0
+        }
+      ],
+      "worst_pair_kendall_tau": 0.333,
+      "pairwise_kendall_tau": [
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "qwen2.5-7b",
+          "kendall_tau": 0.966
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "gemma3-12b",
+          "kendall_tau": 0.69
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "llama3.3-70b",
+          "kendall_tau": 0.54
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": 0.69
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.828
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "gemma3-12b",
+          "kendall_tau": 0.733
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "llama3.3-70b",
+          "kendall_tau": 0.596
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": 0.6
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.867
+        },
+        {
+          "Simulator A": "gemma3-12b",
+          "Simulator B": "llama3.3-70b",
+          "kendall_tau": 0.894
+        },
+        {
+          "Simulator A": "gemma3-12b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": 0.333
+        },
+        {
+          "Simulator A": "gemma3-12b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.867
+        },
+        {
+          "Simulator A": "llama3.3-70b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": 0.447
+        },
+        {
+          "Simulator A": "llama3.3-70b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.745
+        },
+        {
+          "Simulator A": "gpt-oss-120b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.467
+        }
+      ],
+      "t1_variance": {
+        "n_cells": 4,
+        "n_trials_per_cell": 10,
+        "mean_within_cell_std_pp": 4.32,
+        "max_within_cell_std_pp": 4.98,
+        "mean_cross_sim_std_pp": 5.69,
+        "max_cross_sim_std_pp": 6.55,
+        "mean_snr": 1.36,
+        "min_snr": 0.92,
+        "max_snr": 1.83,
+        "per_cell": [
+          {
+            "Agent": "llama3.3-70b",
+            "Simulated user": "deepseek-r1",
+            "n_trials": 10,
+            "mean_pct": 33.3,
+            "within_std_pp": 4.83,
+            "cross_sim_std_pp": 6.12,
+            "snr": 1.27
+          },
+          {
+            "Agent": "deepseek-r1",
+            "Simulated user": "gpt-oss-120b",
+            "n_trials": 10,
+            "mean_pct": 50.0,
+            "within_std_pp": 4.98,
+            "cross_sim_std_pp": 4.59,
+            "snr": 0.92
+          },
+          {
+            "Agent": "gemma3-12b",
+            "Simulated user": "llama3.1-8b",
+            "n_trials": 10,
+            "mean_pct": 23.3,
+            "within_std_pp": 3.58,
+            "cross_sim_std_pp": 6.55,
+            "snr": 1.83
+          },
+          {
+            "Agent": "llama3.1-8b",
+            "Simulated user": "llama3.1-8b",
+            "n_trials": 10,
+            "mean_pct": 23.3,
+            "within_std_pp": 3.87,
+            "cross_sim_std_pp": 5.48,
+            "snr": 1.42
+          }
+        ]
+      },
+      "bootstrap": {
+        "max_swing_mean": 35.03,
+        "max_swing_se": 6.54,
+        "max_swing_ci90": [
+          26.7,
+          46.7
+        ],
+        "worst_tau_mean": 0.032,
+        "worst_tau_se": 0.176,
+        "worst_tau_ci90": [
+          -0.333,
+          0.333
+        ],
+        "n_resamples": 2000,
+        "n_tasks_per_cell": 30
+      }
+    },
+    "tau-bench airline": {
+      "subset": "5 tasks from tau-bench airline (Yao et al. 2024)",
+      "n_dialogues": 180,
+      "n_tasks_per_cell": 5,
+      "n_trials": 1,
+      "max_steps": 40,
+      "success_matrix": [
+        {
+          "Agent": "llama3.1-8b",
+          "Simulated user": {
+            "llama3.1-8b": 100.0,
+            "qwen2.5-7b": 100.0,
+            "gemma3-12b": 100.0,
+            "llama3.3-70b": 80.0,
+            "gpt-oss-120b": 60.0,
+            "deepseek-r1": 100.0
+          }
+        },
+        {
+          "Agent": "qwen2.5-7b",
+          "Simulated user": {
+            "llama3.1-8b": 60.0,
+            "qwen2.5-7b": 60.0,
+            "gemma3-12b": 0.0,
+            "llama3.3-70b": 40.0,
+            "gpt-oss-120b": 80.0,
+            "deepseek-r1": 80.0
+          }
+        },
+        {
+          "Agent": "gemma3-12b",
+          "Simulated user": {
+            "llama3.1-8b": 100.0,
+            "qwen2.5-7b": 100.0,
+            "gemma3-12b": 100.0,
+            "llama3.3-70b": 100.0,
+            "gpt-oss-120b": 100.0,
+            "deepseek-r1": 80.0
+          }
+        },
+        {
+          "Agent": "llama3.3-70b",
+          "Simulated user": {
+            "llama3.1-8b": 60.0,
+            "qwen2.5-7b": 20.0,
+            "gemma3-12b": 60.0,
+            "llama3.3-70b": 40.0,
+            "gpt-oss-120b": 60.0,
+            "deepseek-r1": 60.0
+          }
+        },
+        {
+          "Agent": "gpt-oss-120b",
+          "Simulated user": {
+            "llama3.1-8b": 80.0,
+            "qwen2.5-7b": 60.0,
+            "gemma3-12b": 100.0,
+            "llama3.3-70b": 100.0,
+            "gpt-oss-120b": 80.0,
+            "deepseek-r1": 80.0
+          }
+        },
+        {
+          "Agent": "deepseek-r1",
+          "Simulated user": {
+            "llama3.1-8b": 100.0,
+            "qwen2.5-7b": 40.0,
+            "gemma3-12b": 80.0,
+            "llama3.3-70b": 80.0,
+            "gpt-oss-120b": 80.0,
+            "deepseek-r1": 60.0
+          }
+        }
+      ],
+      "mean_success_rate_pct": 74.44,
+      "max_same_agent_swing_pp": 80.0,
+      "per_agent_swing_pp": [
+        {
+          "Agent": "llama3.1-8b",
+          "swing_pp": 40.0
+        },
+        {
+          "Agent": "qwen2.5-7b",
+          "swing_pp": 80.0
+        },
+        {
+          "Agent": "gemma3-12b",
+          "swing_pp": 20.0
+        },
+        {
+          "Agent": "llama3.3-70b",
+          "swing_pp": 40.0
+        },
+        {
+          "Agent": "gpt-oss-120b",
+          "swing_pp": 40.0
+        },
+        {
+          "Agent": "deepseek-r1",
+          "swing_pp": 60.0
+        }
+      ],
+      "worst_pair_kendall_tau": 0.0,
+      "pairwise_kendall_tau": [
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "qwen2.5-7b",
+          "kendall_tau": 0.502
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "gemma3-12b",
+          "kendall_tau": 0.609
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "llama3.3-70b",
+          "kendall_tau": 0.522
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": 0.273
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.273
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "gemma3-12b",
+          "kendall_tau": 0.56
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "llama3.3-70b",
+          "kendall_tau": 0.48
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": 0.334
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.836
+        },
+        {
+          "Simulator A": "gemma3-12b",
+          "Simulator B": "llama3.3-70b",
+          "kendall_tau": 0.833
+        },
+        {
+          "Simulator A": "gemma3-12b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": 0.174
+        },
+        {
+          "Simulator A": "gemma3-12b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.435
+        },
+        {
+          "Simulator A": "llama3.3-70b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": 0.522
+        },
+        {
+          "Simulator A": "llama3.3-70b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.261
+        },
+        {
+          "Simulator A": "gpt-oss-120b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.0
+        }
+      ],
+      "t1_variance": {
+        "n_cells": 4,
+        "n_trials_per_cell": 10,
+        "mean_within_cell_std_pp": 17.55,
+        "max_within_cell_std_pp": 27.0,
+        "mean_cross_sim_std_pp": 20.22,
+        "max_cross_sim_std_pp": 30.11,
+        "mean_snr": 1.16,
+        "min_snr": 1.02,
+        "max_snr": 1.31,
+        "per_cell": [
+          {
+            "Agent": "qwen2.5-7b",
+            "Simulated user": "gemma3-12b",
+            "n_trials": 10,
+            "mean_pct": 28.0,
+            "within_std_pp": 27.0,
+            "cross_sim_std_pp": 30.11,
+            "snr": 1.12
+          },
+          {
+            "Agent": "deepseek-r1",
+            "Simulated user": "deepseek-r1",
+            "n_trials": 10,
+            "mean_pct": 84.0,
+            "within_std_pp": 15.78,
+            "cross_sim_std_pp": 20.66,
+            "snr": 1.31
+          },
+          {
+            "Agent": "gpt-oss-120b",
+            "Simulated user": "gpt-oss-120b",
+            "n_trials": 10,
+            "mean_pct": 76.0,
+            "within_std_pp": 12.65,
+            "cross_sim_std_pp": 15.06,
+            "snr": 1.19
+          },
+          {
+            "Agent": "gpt-oss-120b",
+            "Simulated user": "llama3.3-70b",
+            "n_trials": 10,
+            "mean_pct": 78.0,
+            "within_std_pp": 14.76,
+            "cross_sim_std_pp": 15.06,
+            "snr": 1.02
+          }
+        ]
+      },
+      "bootstrap": {
+        "max_swing_mean": 88.46,
+        "max_swing_se": 11.3,
+        "max_swing_ci90": [
+          80.0,
+          100.0
+        ],
+        "worst_tau_mean": -0.203,
+        "worst_tau_se": 0.206,
+        "worst_tau_ci90": [
+          -0.6,
+          0.2
+        ],
+        "n_resamples": 2000,
+        "n_tasks_per_cell": 5
+      }
+    },
+    "tau2-bench telecom": {
+      "subset": "20 tasks from tau2-bench telecom_full (Sierra Research 2025)",
+      "n_dialogues": 720,
+      "n_tasks_per_cell": 20,
+      "n_trials": 1,
+      "max_steps": 80,
+      "success_matrix": [
+        {
+          "Agent": "llama3.1-8b",
+          "Simulated user": {
+            "llama3.1-8b": 0.0,
+            "qwen2.5-7b": 0.0,
+            "gemma3-12b": 0.0,
+            "llama3.3-70b": 0.0,
+            "gpt-oss-120b": 5.0,
+            "deepseek-r1": 0.0
+          }
+        },
+        {
+          "Agent": "qwen2.5-7b",
+          "Simulated user": {
+            "llama3.1-8b": 0.0,
+            "qwen2.5-7b": 0.0,
+            "gemma3-12b": 0.0,
+            "llama3.3-70b": 0.0,
+            "gpt-oss-120b": 10.0,
+            "deepseek-r1": 5.0
+          }
+        },
+        {
+          "Agent": "gemma3-12b",
+          "Simulated user": {
+            "llama3.1-8b": 0.0,
+            "qwen2.5-7b": 0.0,
+            "gemma3-12b": 0.0,
+            "llama3.3-70b": 10.0,
+            "gpt-oss-120b": 30.0,
+            "deepseek-r1": 15.0
+          }
+        },
+        {
+          "Agent": "llama3.3-70b",
+          "Simulated user": {
+            "llama3.1-8b": 0.0,
+            "qwen2.5-7b": 0.0,
+            "gemma3-12b": 0.0,
+            "llama3.3-70b": 0.0,
+            "gpt-oss-120b": 0.0,
+            "deepseek-r1": 0.0
+          }
+        },
+        {
+          "Agent": "gpt-oss-120b",
+          "Simulated user": {
+            "llama3.1-8b": 0.0,
+            "qwen2.5-7b": 0.0,
+            "gemma3-12b": 0.0,
+            "llama3.3-70b": 70.0,
+            "gpt-oss-120b": 95.0,
+            "deepseek-r1": 5.0
+          }
+        },
+        {
+          "Agent": "deepseek-r1",
+          "Simulated user": {
+            "llama3.1-8b": 0.0,
+            "qwen2.5-7b": 5.0,
+            "gemma3-12b": 0.0,
+            "llama3.3-70b": 55.0,
+            "gpt-oss-120b": 60.0,
+            "deepseek-r1": 10.0
+          }
+        }
+      ],
+      "mean_success_rate_pct": 10.42,
+      "max_same_agent_swing_pp": 95.0,
+      "per_agent_swing_pp": [
+        {
+          "Agent": "llama3.1-8b",
+          "swing_pp": 5.0
+        },
+        {
+          "Agent": "qwen2.5-7b",
+          "swing_pp": 10.0
+        },
+        {
+          "Agent": "gemma3-12b",
+          "swing_pp": 30.0
+        },
+        {
+          "Agent": "llama3.3-70b",
+          "swing_pp": 0.0
+        },
+        {
+          "Agent": "gpt-oss-120b",
+          "swing_pp": 95.0
+        },
+        {
+          "Agent": "deepseek-r1",
+          "swing_pp": 60.0
+        }
+      ],
+      "worst_pair_kendall_tau": 0.346,
+      "pairwise_kendall_tau": [
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "qwen2.5-7b",
+          "kendall_tau": null
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "gemma3-12b",
+          "kendall_tau": null
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "llama3.3-70b",
+          "kendall_tau": null
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": null
+        },
+        {
+          "Simulator A": "llama3.1-8b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": null
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "gemma3-12b",
+          "kendall_tau": null
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "llama3.3-70b",
+          "kendall_tau": 0.387
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": 0.346
+        },
+        {
+          "Simulator A": "qwen2.5-7b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.372
+        },
+        {
+          "Simulator A": "gemma3-12b",
+          "Simulator B": "llama3.3-70b",
+          "kendall_tau": null
+        },
+        {
+          "Simulator A": "gemma3-12b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": null
+        },
+        {
+          "Simulator A": "gemma3-12b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": null
+        },
+        {
+          "Simulator A": "llama3.3-70b",
+          "Simulator B": "gpt-oss-120b",
+          "kendall_tau": 0.894
+        },
+        {
+          "Simulator A": "llama3.3-70b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.4
+        },
+        {
+          "Simulator A": "gpt-oss-120b",
+          "Simulator B": "deepseek-r1",
+          "kendall_tau": 0.501
+        }
+      ],
+      "t1_variance": {
+        "n_cells": 4,
+        "n_trials_per_cell": 10,
+        "mean_within_cell_std_pp": 10.58,
+        "max_within_cell_std_pp": 19.89,
+        "mean_cross_sim_std_pp": 28.89,
+        "max_cross_sim_std_pp": 42.74,
+        "mean_snr": 1.82,
+        "min_snr": 0.24,
+        "max_snr": 3.06,
+        "per_cell": [
+          {
+            "Agent": "llama3.1-8b",
+            "Simulated user": "llama3.1-8b",
+            "n_trials": 10,
+            "mean_pct": 4.0,
+            "within_std_pp": 8.43,
+            "cross_sim_std_pp": 2.04,
+            "snr": 0.24
+          },
+          {
+            "Agent": "deepseek-r1",
+            "Simulated user": "deepseek-r1",
+            "n_trials": 10,
+            "mean_pct": 0.0,
+            "within_std_pp": 0.0,
+            "cross_sim_std_pp": 28.05,
+            "snr": null
+          },
+          {
+            "Agent": "gpt-oss-120b",
+            "Simulated user": "llama3.3-70b",
+            "n_trials": 10,
+            "mean_pct": 88.0,
+            "within_std_pp": 13.98,
+            "cross_sim_std_pp": 42.74,
+            "snr": 3.06
+          },
+          {
+            "Agent": "gpt-oss-120b",
+            "Simulated user": "gpt-oss-120b",
+            "n_trials": 10,
+            "mean_pct": 82.0,
+            "within_std_pp": 19.89,
+            "cross_sim_std_pp": 42.74,
+            "snr": 2.15
+          }
+        ]
+      },
+      "bootstrap": {
+        "max_swing_mean": 94.92,
+        "max_swing_se": 4.74,
+        "max_swing_ci90": [
+          85.0,
+          100.0
+        ],
+        "worst_tau_mean": -0.515,
+        "worst_tau_se": 0.078,
+        "worst_tau_ci90": [
+          -0.6,
+          -0.467
+        ],
+        "n_resamples": 2000,
+        "n_tasks_per_cell": 20
+      }
+    }
+  },
+  "variance_t1": {
+    "MINT": {
+      "n_cells": 4,
+      "n_trials_per_cell": 10,
+      "mean_within_cell_std_pp": 4.18,
+      "max_within_cell_std_pp": 5.08,
+      "mean_cross_sim_std_pp": 14.1,
+      "max_cross_sim_std_pp": 16.69,
+      "mean_snr": 3.52,
+      "min_snr": 2.6,
+      "max_snr": 5.1,
+      "per_cell": [
+        {
+          "Agent": "llama3.1-8b",
+          "Simulated user": "deepseek-r1",
+          "n_trials": 10,
+          "mean_pct": 74.0,
+          "within_std_pp": 5.08,
+          "cross_sim_std_pp": 13.19,
+          "snr": 2.6
+        },
+        {
+          "Agent": "gemma3-12b",
+          "Simulated user": "gemma3-12b",
+          "n_trials": 10,
+          "mean_pct": 30.0,
+          "within_std_pp": 3.27,
+          "cross_sim_std_pp": 16.69,
+          "snr": 5.1
+        },
+        {
+          "Agent": "gpt-oss-120b",
+          "Simulated user": "gpt-oss-120b",
+          "n_trials": 10,
+          "mean_pct": 92.0,
+          "within_std_pp": 4.6,
+          "cross_sim_std_pp": 13.25,
+          "snr": 2.88
+        },
+        {
+          "Agent": "gpt-oss-120b",
+          "Simulated user": "llama3.1-8b",
+          "n_trials": 10,
+          "mean_pct": 62.0,
+          "within_std_pp": 3.78,
+          "cross_sim_std_pp": 13.25,
+          "snr": 3.51
+        }
+      ]
+    },
+    "24-task customer-service": {
+      "n_cells": 4,
+      "n_trials_per_cell": 10,
+      "mean_within_cell_std_pp": 4.38,
+      "max_within_cell_std_pp": 5.27,
+      "mean_cross_sim_std_pp": 5.52,
+      "max_cross_sim_std_pp": 7.83,
+      "mean_snr": 1.33,
+      "min_snr": 0.95,
+      "max_snr": 2.3,
+      "per_cell": [
+        {
+          "Agent": "deepseek-r1",
+          "Simulated user": "deepseek-r1",
+          "n_trials": 10,
+          "mean_pct": 79.2,
+          "within_std_pp": 4.03,
+          "cross_sim_std_pp": 4.21,
+          "snr": 1.04
+        },
+        {
+          "Agent": "llama3.1-8b",
+          "Simulated user": "gpt-oss-120b",
+          "n_trials": 10,
+          "mean_pct": 47.2,
+          "within_std_pp": 5.27,
+          "cross_sim_std_pp": 5.02,
+          "snr": 0.95
+        },
+        {
+          "Agent": "gemma3-12b",
+          "Simulated user": "llama3.3-70b",
+          "n_trials": 10,
+          "mean_pct": 88.9,
+          "within_std_pp": 3.4,
+          "cross_sim_std_pp": 7.83,
+          "snr": 2.3
+        },
+        {
+          "Agent": "llama3.1-8b",
+          "Simulated user": "qwen2.5-7b",
+          "n_trials": 10,
+          "mean_pct": 45.8,
+          "within_std_pp": 4.83,
+          "cross_sim_std_pp": 5.02,
+          "snr": 1.04
+        }
+      ]
+    },
+    "AgentClinic-MedQA": {
+      "n_cells": 4,
+      "n_trials_per_cell": 10,
+      "mean_within_cell_std_pp": 4.32,
+      "max_within_cell_std_pp": 4.98,
+      "mean_cross_sim_std_pp": 5.69,
+      "max_cross_sim_std_pp": 6.55,
+      "mean_snr": 1.36,
+      "min_snr": 0.92,
+      "max_snr": 1.83,
+      "per_cell": [
+        {
+          "Agent": "llama3.3-70b",
+          "Simulated user": "deepseek-r1",
+          "n_trials": 10,
+          "mean_pct": 33.3,
+          "within_std_pp": 4.83,
+          "cross_sim_std_pp": 6.12,
+          "snr": 1.27
+        },
+        {
+          "Agent": "deepseek-r1",
+          "Simulated user": "gpt-oss-120b",
+          "n_trials": 10,
+          "mean_pct": 50.0,
+          "within_std_pp": 4.98,
+          "cross_sim_std_pp": 4.59,
+          "snr": 0.92
+        },
+        {
+          "Agent": "gemma3-12b",
+          "Simulated user": "llama3.1-8b",
+          "n_trials": 10,
+          "mean_pct": 23.3,
+          "within_std_pp": 3.58,
+          "cross_sim_std_pp": 6.55,
+          "snr": 1.83
+        },
+        {
+          "Agent": "llama3.1-8b",
+          "Simulated user": "llama3.1-8b",
+          "n_trials": 10,
+          "mean_pct": 23.3,
+          "within_std_pp": 3.87,
+          "cross_sim_std_pp": 5.48,
+          "snr": 1.42
+        }
+      ]
+    },
+    "tau-bench airline": {
+      "n_cells": 4,
+      "n_trials_per_cell": 10,
+      "mean_within_cell_std_pp": 17.55,
+      "max_within_cell_std_pp": 27.0,
+      "mean_cross_sim_std_pp": 20.22,
+      "max_cross_sim_std_pp": 30.11,
+      "mean_snr": 1.16,
+      "min_snr": 1.02,
+      "max_snr": 1.31,
+      "per_cell": [
+        {
+          "Agent": "qwen2.5-7b",
+          "Simulated user": "gemma3-12b",
+          "n_trials": 10,
+          "mean_pct": 28.0,
+          "within_std_pp": 27.0,
+          "cross_sim_std_pp": 30.11,
+          "snr": 1.12
+        },
+        {
+          "Agent": "deepseek-r1",
+          "Simulated user": "deepseek-r1",
+          "n_trials": 10,
+          "mean_pct": 84.0,
+          "within_std_pp": 15.78,
+          "cross_sim_std_pp": 20.66,
+          "snr": 1.31
+        },
+        {
+          "Agent": "gpt-oss-120b",
+          "Simulated user": "gpt-oss-120b",
+          "n_trials": 10,
+          "mean_pct": 76.0,
+          "within_std_pp": 12.65,
+          "cross_sim_std_pp": 15.06,
+          "snr": 1.19
+        },
+        {
+          "Agent": "gpt-oss-120b",
+          "Simulated user": "llama3.3-70b",
+          "n_trials": 10,
+          "mean_pct": 78.0,
+          "within_std_pp": 14.76,
+          "cross_sim_std_pp": 15.06,
+          "snr": 1.02
+        }
+      ]
+    },
+    "tau2-bench telecom": {
+      "n_cells": 4,
+      "n_trials_per_cell": 10,
+      "mean_within_cell_std_pp": 10.58,
+      "max_within_cell_std_pp": 19.89,
+      "mean_cross_sim_std_pp": 28.89,
+      "max_cross_sim_std_pp": 42.74,
+      "mean_snr": 1.82,
+      "min_snr": 0.24,
+      "max_snr": 3.06,
+      "per_cell": [
+        {
+          "Agent": "llama3.1-8b",
+          "Simulated user": "llama3.1-8b",
+          "n_trials": 10,
+          "mean_pct": 4.0,
+          "within_std_pp": 8.43,
+          "cross_sim_std_pp": 2.04,
+          "snr": 0.24
+        },
+        {
+          "Agent": "deepseek-r1",
+          "Simulated user": "deepseek-r1",
+          "n_trials": 10,
+          "mean_pct": 0.0,
+          "within_std_pp": 0.0,
+          "cross_sim_std_pp": 28.05,
+          "snr": null
+        },
+        {
+          "Agent": "gpt-oss-120b",
+          "Simulated user": "llama3.3-70b",
+          "n_trials": 10,
+          "mean_pct": 88.0,
+          "within_std_pp": 13.98,
+          "cross_sim_std_pp": 42.74,
+          "snr": 3.06
+        },
+        {
+          "Agent": "gpt-oss-120b",
+          "Simulated user": "gpt-oss-120b",
+          "n_trials": 10,
+          "mean_pct": 82.0,
+          "within_std_pp": 19.89,
+          "cross_sim_std_pp": 42.74,
+          "snr": 2.15
+        }
+      ]
+    }
+  }
+}
